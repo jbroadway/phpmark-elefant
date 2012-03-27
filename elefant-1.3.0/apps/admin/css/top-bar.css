@@ -1,0 +1,210 @@
+body {
+	padding-top: 20px;
+}
+
+#admin-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 32px;
+	width: 100%;
+	z-index: 100000;
+	background: #404040;
+	background: rgba(0,0,0,.75);
+	color: #f5f5f5;
+	position: fixed;
+	margin: 0px;
+	padding: 0px 10px 0px 10px;
+	font-size: 18px !important;
+	font-weight: bold;
+	font-family: Helvetica, Arial, sans-serif !important;
+}
+
+	#admin-bar img {
+		margin-top: 0px;
+		border: 0px none;
+	}
+
+#admin-links {
+	float: right;
+	font-size: 12px !important;
+	margin-right: 20px;
+	/* preload for tooltop-top */
+	background: url(/apps/admin/css/admin/tooltip-top.png) no-repeat -999px -999px;
+}
+
+	#admin-links>span {
+		display: block;
+		float: left;
+		margin: 0;
+		height: 25px;
+		padding: 7px 8px 0px 8px;
+		font-weight: normal;
+		color: #f5f5f5;
+		position: relative;
+	}
+
+		#admin-links>span:hover {
+			color: #A753CC;
+			background: #101010;
+			background: rgba(0,0,0,.9);
+			text-decoration: none;
+		}
+
+		#admin-tools>strong {
+			font-weight: normal;
+			background: #5a5a5a;
+			border: 1px solid #777;
+			-webkit-border-radius: 12px;
+			-moz-border-radius: 12px;
+			border-radius: 12px;
+			padding: 0px 3px 0px 3px;
+		}
+
+		#admin-tools:hover>strong {
+			background: #404040;
+			background: rgba(167,83,204,.4);
+			border: 1px solid #A753CC;
+		}
+
+	#admin-links a {
+		display: block;
+		float: left;
+		margin: 0;
+		height: 25px;
+		padding: 7px 8px 0px 8px;
+		font-weight: normal;
+		color: #f5f5f5;
+		text-decoration: none;
+	}
+
+		#admin-links a:hover {
+			color: #A753CC;
+			background: #101010;
+			background: rgba(0,0,0,.9);
+			text-decoration: none;
+		}
+
+	#admin-tools-list {
+		display: none;
+		position: absolute;
+		left: 0;
+		top: 32px;
+		margin: 0;
+		padding: 0;
+		float: left;
+		border: 0;
+		list-style: none;
+	}
+
+	#admin-tools-list li {
+		margin: 0;
+		padding: 0;
+		clear: both;
+	}
+
+	#admin-tools-list li a {
+		display: block;
+		width: 150px;
+		text-decoration: none;
+		padding: 5px 0 0 5px;
+		margin: 0;
+		color: #fff;
+		background: #404040;
+		background: rgba(0,0,0,.7);
+		border-bottom: 1px solid rgba(255,255,255,.35);
+	}
+
+		#admin-tools-list li a.not-installed, #admin-tools-list li a.needs-upgrade {
+			background: #8A5AB5;
+			background: rgba(138,90,181,.95);
+		}
+
+	#admin-tools-list li a:hover {
+		text-decoration: none;
+		background: #101010;
+		background: rgba(0,0,0,.8);
+	}
+
+	#admin-update-available {
+		color: #fff;
+		font-size: 12px;
+		font-weight: normal;
+		text-decoration: underline;
+		text-align: center;
+		display: block;
+		width: 200px;
+		margin: auto;
+		margin-top: -24px;
+		z-index: 100001;
+	}
+
+	#admin-update-available:hover {
+		color: #A753CC;
+	}
+
+.admin-options {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	height: 23px;
+}
+
+.admin-options a {
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	height: 23px;
+	float: left;
+	background: rgba(0,0,0,.75);
+}
+
+.admin-options a:hover {
+	background: rgba(0,0,0,.9);
+	text-decoration: none !important;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.admin-options a img {
+	height: 16px;
+	width: 16px;
+	margin: 0;
+	padding: 3px 5px 5px 5px;
+	border: 0;
+}
+
+.admin-tooltip {
+	position: absolute;
+	z-index: 25;
+	display: none;
+	top: 23px;
+	width: 100px;
+	left: -37px;
+}
+
+	.admin-tooltip-top {
+		height: 8px;
+		background: url(/apps/admin/css/admin/tooltip-top.png);
+		background-position: 50% 0%;
+	}
+
+	.admin-tooltip-body {
+		padding: 2px 5px 0px 5px;
+		font-size: 12px;
+		color: #222;
+		font-weight: bold;
+		background-color: #fff;
+		border-left: 1px solid #222;
+		border-right: 1px solid #222;
+		border-bottom: 1px solid #222;
+		height: 20px;
+		text-align: center;
+	}
+
+	.admin-tooltip-body {
+		text-decoration: none !important;
+	}

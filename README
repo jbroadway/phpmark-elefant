@@ -1,0 +1,19 @@
+This is a fork of phpmark (http://code.google.com/p/phpmark), a
+benchmarking tool that tests the performance of a Hello World
+application against various PHP frameworks. This fork tests the
+Elefant web framework (http://www.elefantcms.com/).
+
+The modifications are as follows:
+
+1. Removed the other frameworks - use the default phpmark to test those
+2. Added the latest Elefant source from GitHub (1.3.0)
+3. Ran ./conf/elefant build-app hello
+4. Added apps/hello/handlers/world.php
+5. Edited the README file
+
+Use the included "benchmark.sh" script to run the benchmark.
+First, set up a virtual host for the benchmark site, pointing its
+document root to the Elefant folder.
+
+
+Elefant 1.3.0:               /hello/world

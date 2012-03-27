@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ conf('General', 'site_name') }} - {{ window_title|none }}</title>
+	<meta http-equiv="content-type" content="text/html; charset={{ i18n.charset }}" />
+	{% if detect('mobile') %}
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="/css/mobile.css" />
+	{% else %}
+		<link rel="stylesheet" type="text/css" href="/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="/css/text.css" />
+		<link rel="stylesheet" type="text/css" href="/css/960.css" />
+		<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	{% end %}
+	{! admin/head !}
+	{{ head|none }}
+</head>
+<body>
+<div id="wrapper" class="container_12">
+	<div id="head" class="grid_12">
+		<div class="grid_6 alpha">
+			<h1>{{ conf('General', 'site_name') }}</h1>
+		</div>
+		<div class="grid_6 omega menu">
+			{! navigation/top !}
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div id="body" class="grid_8">
+
+{% if title != '' %}<h2>{{ title|none }}</h2>{% end %}
+{{ body|none }}
+
+	</div>
+	<div id="sidebar" class="grid_4">
+{! blocks/members !}
+	</div>
+	<div class="clear"></div>
+	<div id="footer" class="grid_12">
+		<div class="grid_6 alpha menu">
+			{! navigation/top !}
+		</div>
+		<div class="grid_6 omega powered">
+			{"Powered by"} <a href="http://www.elefantcms.com/">Elefant CMS</a>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+{{ tail|none }}
+</body>
+</html>

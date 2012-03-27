@@ -1,0 +1,65 @@
+<script type="text/javascript" src="/apps/filemanager/js/jquery.tmpl.beta1.min.js"></script>
+<script type="text/javascript" src="/apps/filemanager/js/jquery.filemanager.js"></script>
+<script type="text/x-jquery-tmpl" id="tpl_dir">
+	<tr>
+		<td><img src="/apps/admin/css/admin/folder.png" alt="${name}" style="padding-right: 5px; margin-top: -2px" /> <a href="/filemanager?path=${path}">${name}</a></td>
+		<td>${mtime}</td>
+		<td>&nbsp;</td>
+		<td><a href="#" onclick="return $.filemanager ('mv', {file: '${path}', name: '${name}'})">{"Rename"}</a></td>
+	</tr>
+</script>
+<script type="text/x-jquery-tmpl" id="tpl_file">
+	<tr>
+		<td><img src="/apps/admin/css/admin/file.png" alt="${name}" style="padding-right: 5px; margin-top: -2px" /> <a href="/files/${path}" target="_blank">${name}</a></td>
+		<td>${mtime}</td>
+		<td>${fsize}</td>
+		<td>
+			<a href="#" onclick="return $.filemanager ('mv', {file: '${path}', name: '${name}'})">{"Rename"}</a> | 
+			<a href="#" onclick="return $.filemanager ('rm', {file: '${path}'})">{"Delete"}</a>
+		</td>
+	</tr>
+</script>
+<script type="text/javascript">
+var filemanager_path = '{{ path }}';
+$(function () {
+	$.filemanager ('ls', {file: '{{ path }}'});
+});
+</script>
+
+<h2>
+{% if path == '' %}
+	{"Files"}
+{% else %}
+	<a href="/filemanager">{"Files"}</a>
+	{% foreach parts %}
+		{% if loop_index == $data->lastpath %}
+			/ {{ loop_index }}
+		{% else %}
+			/ <a href="/filemanager?path={{ loop_value }}">{{ loop_index }}</a>
+		{% end %}
+	{% end %}
+{% end %}
+</h2>
+
+<p>
+	<form action="/filemanager/upload" method="post" enctype="multipart/form-data">
+	<input type="hidden" name="path" value="{{ path }}" />
+	<a href="#" onclick="return $.filemanager ('mkdir', {file: '{{ path }}'})">{"New folder"}</a>
+	&nbsp;|&nbsp;
+	{"New file"} ({"max"} {{ ini_get ('upload_max_filesize')}}B): <input type="file" name="file" /> <input type="submit" value="{"Upload"}" onclick="if (this.form.elements.file.value == '') { alert ('Please select a file to upload.'); return false; } this.value = 'Uploading...'; this.disabled = true; this.form.submit ()" />
+	&nbsp;|&nbsp;
+	<a href="/filemanager/multi?path=/{{ path }}">{"Multi-file uploader"}</a>
+	</form>
+</p>
+
+<p>
+<table width="100%">
+	<tr>
+		<th width="55%">{" Name "}</th>
+		<th width="22%">{" Last modified "}</th>
+		<th width="10%">{" File size "}</th>
+		<th width="13%">&nbsp;</th>
+	</tr>
+	<tbody id="file-list"></tbody>
+</table>
+</p>
