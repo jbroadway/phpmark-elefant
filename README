@@ -12,7 +12,7 @@ The modifications are as follows:
 5. Edited the README file
 
 Use the included "benchmark.sh" script to run the benchmark. 
-First, set up a virtual host for the benchmark site, pointing its
+First, set up a virtual host for each benchmark site, pointing its
 document root to the Elefant folder.
 
 
