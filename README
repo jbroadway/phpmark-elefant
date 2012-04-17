@@ -11,9 +11,9 @@ The modifications are as follows:
 4. Added apps/hello/handlers/world.php
 5. Edited the README file
 
-Use the included "benchmark.sh" script to run the benchmark.
+Use the included "benchmark.sh" script to run the benchmark. 
 First, set up a virtual host for the benchmark site, pointing its
 document root to the Elefant folder.
 
 
-Elefant 1.3.0:               /hello/world
+Elefant:               /hello/world
