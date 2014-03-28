@@ -60,21 +60,90 @@ Here is a chart of the results of the test:
 
 And here is a table of the actual numbers:
 
-|  | **Req/s - APC off** | **Req/s - APC on** | Winners |
-| - | -: | -: | -: |
-| **CakePHP 1.3.4** | 51.66 | 78.57 |  |
-| **CodeIgniter 2.1.0** | 214.90 | 463.33 | 3rd |
-| **Elefant 1.3.0** | 365.12 | 535.49 | **1st** |
-| **FatFree 2.0.9** | 350.90 | 518.23 | 2nd |
-| **FuelPHP 1.1** | 147.70 | 211.37 |  |
-| **Kohana 3.2** | 167.10 | 258.60 |  |
-| **Laravel 3.1.3** | 186.43 | 262.87 |  |
-| **Silex (2012-03-31)** | 90.79 | 102.83 |  |
-| **Symfony 1.4.8** | 59.27 | 99.20 |  |
-| **Symfony 2** | 104.77 | 188.60 |  |
-| **Yii 1.1.4** | 166.91 | 417.33 |  |
-| **Zend 1.10.8** | 108.47 | 163.50 |  |
-
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th style="text-align:right"><strong>Req/s - APC off</strong></th>
+  <th style="text-align:right"><strong>Req/s - APC on</strong></th>
+  <th style="text-align:right">Winners</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>CakePHP 1.3.4</strong></td>
+  <td style="text-align:right">51.66</td>
+  <td style="text-align:right">78.57</td>
+  <td style="text-align:right"></td>
+</tr>
+<tr>
+  <td><strong>CodeIgniter 2.1.0</strong></td>
+  <td style="text-align:right">214.90</td>
+  <td style="text-align:right">463.33</td>
+  <td style="text-align:right">3rd</td>
+</tr>
+<tr>
+  <td><strong>Elefant 1.3.0</strong></td>
+  <td style="text-align:right">365.12</td>
+  <td style="text-align:right">535.49</td>
+  <td style="text-align:right"><strong>1st</strong></td>
+</tr>
+<tr>
+  <td><strong>FatFree 2.0.9</strong></td>
+  <td style="text-align:right">350.90</td>
+  <td style="text-align:right">518.23</td>
+  <td style="text-align:right">2nd</td>
+</tr>
+<tr>
+  <td><strong>FuelPHP 1.1</strong></td>
+  <td style="text-align:right">147.70</td>
+  <td style="text-align:right">211.37</td>
+  <td style="text-align:right"></td>
+</tr>
+<tr>
+  <td><strong>Kohana 3.2</strong></td>
+  <td style="text-align:right">167.10</td>
+  <td style="text-align:right">258.60</td>
+  <td style="text-align:right"></td>
+</tr>
+<tr>
+  <td><strong>Laravel 3.1.3</strong></td>
+  <td style="text-align:right">186.43</td>
+  <td style="text-align:right">262.87</td>
+  <td style="text-align:right"></td>
+</tr>
+<tr>
+  <td><strong>Silex (2012-03-31)</strong></td>
+  <td style="text-align:right">90.79</td>
+  <td style="text-align:right">102.83</td>
+  <td style="text-align:right"></td>
+</tr>
+<tr>
+  <td><strong>Symfony 1.4.8</strong></td>
+  <td style="text-align:right">59.27</td>
+  <td style="text-align:right">99.20</td>
+  <td style="text-align:right"></td>
+</tr>
+<tr>
+  <td><strong>Symfony 2</strong></td>
+  <td style="text-align:right">104.77</td>
+  <td style="text-align:right">188.60</td>
+  <td style="text-align:right"></td>
+</tr>
+<tr>
+  <td><strong>Yii 1.1.4</strong></td>
+  <td style="text-align:right">166.91</td>
+  <td style="text-align:right">417.33</td>
+  <td style="text-align:right"></td>
+</tr>
+<tr>
+  <td><strong>Zend 1.10.8</strong></td>
+  <td style="text-align:right">108.47</td>
+  <td style="text-align:right">163.50</td>
+  <td style="text-align:right"></td>
+</tr>
+</tbody>
+</table>
 
 Some notes about the tests:
 
