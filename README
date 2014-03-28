@@ -15,5 +15,9 @@ Use the included "benchmark.sh" script to run the benchmark.
 First, set up a virtual host for each benchmark site, pointing its
 document root to the Elefant folder.
 
+For the test results, visit:
+
+https://github.com/jbroadway/phpmark-elefant/blob/master/php-framework-benchmark-results.md
+
 
 Elefant:               /hello/world
