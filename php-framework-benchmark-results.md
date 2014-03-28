@@ -17,6 +17,8 @@ This page shows benchmarks comparing the following PHP frameworks:
 * Yii 1.1.10
 * Zend 1.11.11
 
+> **Note:** CakePHP 2.1.1 is still in the works, but having issues with caching. I will update the results once those are sorted out.
+
 The results are measured in requests/second.
 
 The test is a simple "Hello World".This effectively tests only the MVC routing and controllers, independent of database abstraction layer, template engine, and application logic. In this way, we can see the overhead the framework itself adds to each page request with its front controller, bootstrapping, request routing, and how well each framework makes use of APC or OPcache.
